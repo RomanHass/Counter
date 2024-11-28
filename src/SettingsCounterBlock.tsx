@@ -17,7 +17,7 @@ export const SettingCounterBlock = () => {
         </div>
       </div>
       <div className="counter__buttons">
-        <Button title="set" />
+        <Button title="set" onClick={() => {}} />
       </div>
     </div>
   )

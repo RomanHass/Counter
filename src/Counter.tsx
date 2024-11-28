@@ -1,10 +1,19 @@
 import { Button } from "./Button";
 
 type PropsType = {
-  value: number;
+  value: number
+  onChange: (count: number) => void
 }
 
-export const Counter = ({value}: PropsType) => {
+export const Counter = ({value, onChange}: PropsType) => {
+
+  const onClickIncreaseHandler = () => {
+    onChange(value + 1)
+  }
+
+  const onClickResetHandler = () => {
+    onChange(0)
+  }
 
   return (
     <div className="counter container">
@@ -14,9 +23,11 @@ export const Counter = ({value}: PropsType) => {
       <div className="counter__buttons">
         <Button
           title="inc"
+          onClick={onClickIncreaseHandler}
         />
         <Button
           title="reset"
+          onClick={onClickResetHandler}
         />
       </div>
     </div>

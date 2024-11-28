@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="container-big">
-        <Counter value={count} />
+        <Counter value={count} onChange={setCount} />
       </div>
     </div>
   );
